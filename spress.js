@@ -16,7 +16,7 @@ const app = express()
 // Ruta específica para la página principal
 app.get("/", (req, res) => {
   // res.sendFile(path.join(__dirname, "public", "index.html"))
-  res.send("<h1>Hola Mundo</h1>")
+  res.send("<h1>Hola Mundo, pero desde mi nuevo hosting</h1>")
 })
 
 // Ruta para manejar 404 - Página no encontrada

@@ -1,0 +1,16 @@
+{
+  "name": "personas-api",
+  "version": "1.0.0",
+  "description": "Ejercicio numero 1 del practico 3 - Web II 2025",
+  "main": "spress.js",
+  "type": "module",
+  "scripts": {
+    "start": "node spress.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alumnos Dev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Usuarios Aleatorios</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Generador de Usuarios Aleatorios</h1>
+      <p>Esta aplicación consume la API de RandomUser.me para generar perfiles de usuarios ficticios.</p>
+    </header>
+
+    <main>
+      <div class="controls">
+        <div class="input-group">
+          <label for="userCount">Cantidad de usuarios:</label>
+          <input type="number" id="userCount" min="1" max="50" value="5">
+        </div>
+        <button id="fetchUsers" class="btn primary">Obtener Usuarios</button>
+      </div>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Cargando usuarios...</p>
+      </div>
+
+      <div id="error" class="error hidden"></div>
+
+      <div id="userTable" class="table-container hidden">
+        <h2>Lista de Usuarios (<span id="userCount">0</span>)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>País</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="userList">
+            <!-- Los usuarios se insertarán aquí dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- Modal para mostrar detalles del usuario -->
+    <div id="userModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="userDetails">
+          <!-- Los detalles del usuario se insertarán aquí dinámicamente -->
+        </div>
+        <div class="modal-actions">
+          <button id="deleteUserBtn" class="btn danger">Eliminar Usuario</button>
+          <button id="closeModalBtn" class="btn secondary">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay" class="overlay hidden"></div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
